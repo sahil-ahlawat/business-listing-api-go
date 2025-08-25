@@ -1,0 +1,24 @@
+docker run --rm -it -p 3000:3000 -v C:\MAMP\htdocs\hustle\fitness:/app -w /app golang:1.22 sh
+
+docker compose up --build
+
+go run main.go
+
+
+✅ %cd% gets the current directory on Windows
+✅ -v mounts it inside the container
+✅ -w /app sets working directory
+✅ -it allows interactive terminal
+✅ sh opens a shell inside the container
+
+🔧 Once inside the container:
+You can run, navigate to the respective project folder inside app:
+
+go version        # check Go is available
+go run main.go    # run your code
+go build          # build your app
+./your-binary     # run it
+
+
+docker compose down
+docker compose up -d
